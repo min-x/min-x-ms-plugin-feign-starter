@@ -14,7 +14,15 @@
     <version>1.0.0</version>
 </dependency>
 ```
-
+3.插件定义规范
+```aidl
+balancer:定义负载均衡，规定分组下使用不同的负载均衡策略。
+config:自动装配配置，里面有各个模块生效的配置。
+context：定义请求context，用于当前请求的内容传递。
+filter：获取来自其他服务/ngx的请求分组内容，并设置到context。
+interceptor：设置请求服务的分组信息等，用于下一个服务的filter获取请求分组内容。
+properties：定义配置内容，包含开发者定义与获取的分组信息
+```
 
 ## Reference
 > 版本V1.0.0
