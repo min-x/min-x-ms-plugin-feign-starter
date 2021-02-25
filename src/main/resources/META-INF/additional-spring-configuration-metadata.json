@@ -1,0 +1,24 @@
+{
+  "properties": [
+    {
+      "name": "ms.plugin.feign.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.x.ms.plugin.feign.properties.MSPluginFeignProperties",
+      "description": "enabled ms plugin feign.",
+      "defaultValue": true
+    },
+    {
+      "name": "ms.plugin.feign.groupName",
+      "type": "java.lang.String",
+      "sourceType": "com.x.ms.plugin.feign.properties.MSPluginFeignProperties",
+      "description": "ms plugin feign set current service registry group name.",
+      "defaultValue": "min-x-group"
+    },
+    {
+      "name": "ms.plugin.feign.serviceProvider",
+      "type": "java.lang.String",
+      "sourceType": "com.x.ms.plugin.feign.properties.MSPluginFeignProperties",
+      "description": "ms plugin feign customize service providers."
+    }
+  ]
+}

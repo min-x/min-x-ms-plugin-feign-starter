@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.x.ms.plugin.feign.config.MSPluginFeignAutoConfiguration

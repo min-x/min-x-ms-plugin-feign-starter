@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.x</groupId>
+        <artifactId>min-x-boot</artifactId>
+        <version>2.4.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.x</groupId>
+    <artifactId>min-x-ms-plugin-feign-starter</artifactId>
+    <version>1.0.0</version>
+    <name>min-x-ms-plugin-feign-starter</name>
+    <packaging>jar</packaging>
+    <description>com.x ms-plugin min-x-ms-plugin-feign-starter</description>
+
+    <dependencies>
+        <!--
+        optional:可选的，可以理解为此功能/此依赖可选，如果不需要某项功能，可以不引用这个包。
+        scope provided：提供的，可以理解为此包不由我直接提供，需要调用者/容器提供
+        -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <scope>compile</scope>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+</project>
