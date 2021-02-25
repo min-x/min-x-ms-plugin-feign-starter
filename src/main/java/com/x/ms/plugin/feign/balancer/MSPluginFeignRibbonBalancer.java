@@ -1,5 +1,6 @@
 package com.x.ms.plugin.feign.balancer;
 
+import com.x.ms.plugin.feign.properties.MSPluginFeignProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.cloud.client.ServiceInstance;
@@ -15,12 +16,16 @@ import reactor.core.publisher.Mono;
 @Slf4j
 public class MSPluginFeignRibbonBalancer extends RoundRobinLoadBalancer {
 
-    public MSPluginFeignRibbonBalancer(ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider, String serviceId) {
+    private MSPluginFeignProperties msPluginFeignProperties;
+
+    public MSPluginFeignRibbonBalancer(MSPluginFeignProperties msPluginFeignProperties, ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider, String serviceId) {
         super(serviceInstanceListSupplierProvider, serviceId);
+        this.msPluginFeignProperties = msPluginFeignProperties;
     }
 
-    public MSPluginFeignRibbonBalancer(ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider, String serviceId, int seedPosition) {
+    public MSPluginFeignRibbonBalancer(MSPluginFeignProperties msPluginFeignProperties, ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider, String serviceId, int seedPosition) {
         super(serviceInstanceListSupplierProvider, serviceId, seedPosition);
+        this.msPluginFeignProperties = msPluginFeignProperties;
     }
 
     @Override
